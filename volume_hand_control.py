@@ -61,7 +61,7 @@ while  True:
         break  # Exit if no frame is captured
     
     img = detector.find_hands(img)
-    lm_list = detector.find_position(img, draw = False)
+    lm_list, b_box = detector.find_position(img, draw = False)
     
     if len(lm_list) != 0:
         # print(lm_list[4], lm_list[8])
